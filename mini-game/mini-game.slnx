@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Элементы решения/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="mini-game.vcxproj" Id="181821d6-447c-477d-b5a4-cfe9e9f955bb" />
+</Solution>
