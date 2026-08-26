@@ -97,12 +97,12 @@ void list()
     cout << "3. continue" << endl;
     cout << "0. exit" << endl;
 }
+// Завтра переделаю 
+class products
+{
+public:
+    int price;
+    int count;
 
-//void oplata()
-//{
-//    int* number = new int;
-//    cin >> *number;
-//
-//
-//
-//}
+
+};
