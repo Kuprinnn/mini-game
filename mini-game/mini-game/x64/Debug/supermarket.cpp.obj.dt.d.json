@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\github\\mini-game\\supermarket.cpp",
+        "Source": "c:\\github\\mini-game\\source\\modules\\supermarket\\supermarket.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\github\\mini-game\\supermarket.h",
-            "c:\\github\\mini-game\\products.h",
+            "c:\\github\\mini-game\\source\\modules\\supermarket\\supermarket.h",
+            "c:\\github\\mini-game\\source\\modules\\products\\products.h",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\iostream",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\yvals_core.h",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",

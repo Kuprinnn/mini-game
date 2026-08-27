@@ -111,6 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)source;$(ProjectDir)source\modules\supermarket;$(ProjectDir)include\modules\products</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,13 +140,13 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="products.cpp" />
-    <ClCompile Include="supermarket.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\modules\products\products.cpp" />
+    <ClCompile Include="source\modules\supermarket\supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="products.h" />
-    <ClInclude Include="supermarket.h" />
+    <ClInclude Include="source\modules\products\products.h" />
+    <ClInclude Include="source\modules\supermarket\supermarket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

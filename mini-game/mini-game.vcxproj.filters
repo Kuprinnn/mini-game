@@ -15,22 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="source\main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="supermarket.cpp">
+    <ClCompile Include="source\modules\supermarket\supermarket.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="products.cpp">
+    <ClCompile Include="source\modules\products\products.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="supermarket.h">
-      <Filter>Исходные файлы</Filter>
+    <ClInclude Include="source\modules\supermarket\supermarket.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="products.h">
-      <Filter>Исходные файлы</Filter>
+    <ClInclude Include="source\modules\products\products.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

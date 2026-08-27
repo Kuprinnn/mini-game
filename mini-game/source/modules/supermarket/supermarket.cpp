@@ -41,8 +41,8 @@ void buy()
         cout << "===========BUY============" << endl << endl;
         cout << "1. " << milk.name << " = " << milk.price << "p. " << endl;
         cout << "2. " << water.name << " = " << water.price  << "p." << endl;
-        cout << "3. continue" << endl;
-        cout << "0. exit" << endl << endl;
+        cout << "3.  continue ->" << endl;
+        cout << "0.  <- back " << endl << endl;
         cout << "==========================" << endl << endl;
 
         cin >> *number;
@@ -54,6 +54,7 @@ void buy()
             {
                 start();
                 break;
+                return;
             }
 
             case 1:
@@ -76,15 +77,17 @@ void buy()
                 {
                     cout << "============BASKET==========" << endl << endl;
                     cout << milk.name << " = " << milk.count << endl;
-                    cout << "total: " << milk.count * milk.price + water.count * water.price << endl << endl;
+                    cout << "total: " << milk.count * milk.price + water.count * water.price << "p." << endl << endl;
                     cout << "=============================" << endl << endl;
+
+
                 }
 
                 else if (milk.count == 0)
                 {
                     cout << "============BASKET==========" << endl << endl;
                     cout << water.name << " = " << water.count << endl;
-                    cout << "total: " << milk.count * milk.price + water.count * water.price << endl << endl;
+                    cout << "total: " << milk.count * milk.price + water.count * water.price << "p." << endl << endl;
                     cout << "============================" << endl << endl;
                 }
 
@@ -93,12 +96,18 @@ void buy()
                     cout << "============BASKET==========" << endl << endl;
                     cout << milk.name << " = " << milk.count << endl;
                     cout << water.name << " = " << water.count << endl;
-                    cout << "total: " << milk.count * milk.price + water.count * water.price << endl << endl;
+                    cout << "total: " << milk.count * milk.price + water.count * water.price << "p." << endl << endl;
                     cout << "=============================" << endl << endl;
                 }
 
                 delete number;
                 return;
+            }
+
+            default:
+            {
+                cout << "ERROR! NUMBER FROM 0-4" << endl << endl;
+                break;
             }
         }
     }

@@ -16,4 +16,4 @@ public:
 
     Products(string n, int p, int c);
 };
-#endif // PRODUCTS_H
+#endif
