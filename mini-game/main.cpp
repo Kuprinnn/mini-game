@@ -1,14 +1,8 @@
 #include "supermarket.h"
-
-#include <iostream>
-#include <string>
-
-using namespace std;
-
+#include "products.h"
 
 int main() 
 {
     menu();
 
-    return 0;
 }

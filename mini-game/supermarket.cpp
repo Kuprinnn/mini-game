@@ -5,15 +5,14 @@ int water = 0, water_price = 80;
 
 void menu()
 {
-    cout << "SHOP" << endl << endl;
-    // Опция над которой работаю
+    cout << "===========SHOP===========" << endl << endl;
     cout << "1. buy" << endl;
-    // Скоро
     cout << "2. inventory" << endl;
-    // Скоро
     cout << "3. history " << endl << endl;
+    cout << "==========================" << endl << endl;
 
     int* number = new int;
+
     cin >> *number;
     cout << endl;
 
@@ -23,86 +22,77 @@ void menu()
         buy();
         delete number;
         break;
-
-    case 2:
-        break;
     }
 }
 
 void buy()
 {
-    list();
     cout << endl;
 
     int *number = new int;
     
-
     while (true)
     {
+        cout << "===========BUY============" << endl << endl;
+        cout << "1. milk =  " << milk_price << endl;
+        cout << "2. water =  " << water_price << endl;
+        cout << "3. continue" << endl;
+        cout << "0. exit" << endl << endl;
+        cout << "==========================" << endl << endl;
+
         cin >> *number;
         cout << endl;
 
         switch (*number)
         {
-        case 0:
-            menu();
-            break;
-
-        case 1:
-            cout << "+1 milk" << endl << endl;
-            milk += 1;
-            list();
-            break;
-
-        case 2:
-            cout << "+1 water" << endl << endl;
-            water += 1;
-            list();
-            break;
-
-        case 3:
-            if (water == 0)
+            case 0:
             {
-                cout << "your basket: " << endl;
-                cout << "milk = " << milk << endl;
-                cout << "total: " << milk * milk_price + water * water_price << endl;
+                menu();
+                break;
             }
-            else if (milk == 0)
-            {
-                cout << "your basket: " << endl;
-                cout << "water = " << water << endl;
-                cout << "total: " << milk * milk_price + water * water_price << endl;
-            }
-            else
-            {
-                cout << "your basket: " << endl;
-                cout << "milk = " << milk << endl;
-                cout << "water = " << water << endl;
-                cout << "total: " << milk * milk_price + water * water_price << endl;
-                //delete number;
-                //oplata();
-            }
-            break;
 
-        default:
-            break;
+            case 1:
+            {
+                cout << " +1 milk " << endl << endl;
+                milk += 1;
+                break;
+            }
+              
+            case 2:
+            {
+                cout << " +1 water " << endl << endl;
+                water += 1;
+                break;
+            }
+
+            case 3:
+            {
+                if (water == 0)
+                {
+                    cout << "============BASKET========== " << endl << endl;
+                    cout << "milk = " << milk << endl;
+                    cout << "total: " << milk * milk_price + water * water_price << endl << endl;
+                    cout << " ============================ " << endl << endl;
+                }
+
+                else if (milk == 0)
+                {
+                    cout << "============BASKET========== " << endl << endl;
+                    cout << "water = " << water << endl;
+                    cout << "total: " << milk * milk_price + water * water_price << endl;
+                }
+
+                else
+                {
+                    cout << "============BASKET========== " << endl << endl;
+                    cout << "milk = " << milk << endl;
+                    cout << "water = " << water << endl;
+                    cout << "total: " << milk * milk_price + water * water_price << endl;
+                }
+
+                delete number;
+                return;
+            }
         }
     }
 }
-
-void list()
-{
-    cout << "1. milk =  " << milk_price << endl;
-    cout << "2. water =  " << water_price << endl;
-    cout << "3. continue" << endl;
-    cout << "0. exit" << endl;
-}
-// Завтра переделаю 
-class products
-{
-public:
-    int price;
-    int count;
-
-
-};
