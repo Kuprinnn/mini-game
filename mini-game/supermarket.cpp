@@ -1,9 +1,14 @@
 #include "supermarket.h"
 
-int milk  = 0, milk_price  = 110;
-int water = 0, water_price = 80;
+using namespace std;
 
-void menu()
+// ==========================
+// ==========Товары==========
+Products milk("milk", 100, 0);
+Products water("water", 80, 0);
+//===========================
+
+void start()
 {
     cout << "===========SHOP===========" << endl << endl;
     cout << "1. buy" << endl;
@@ -34,8 +39,8 @@ void buy()
     while (true)
     {
         cout << "===========BUY============" << endl << endl;
-        cout << "1. milk =  " << milk_price << endl;
-        cout << "2. water =  " << water_price << endl;
+        cout << "1. " << milk.name << " = " << milk.price << "p. " << endl;
+        cout << "2. " << water.name << " = " << water.price  << "p." << endl;
         cout << "3. continue" << endl;
         cout << "0. exit" << endl << endl;
         cout << "==========================" << endl << endl;
@@ -47,47 +52,49 @@ void buy()
         {
             case 0:
             {
-                menu();
+                start();
                 break;
             }
 
             case 1:
             {
                 cout << " +1 milk " << endl << endl;
-                milk += 1;
+                milk.count += 1;
                 break;
             }
               
             case 2:
             {
                 cout << " +1 water " << endl << endl;
-                water += 1;
+                water.count += 1;
                 break;
             }
 
             case 3:
             {
-                if (water == 0)
+                if (water.count == 0)
                 {
-                    cout << "============BASKET========== " << endl << endl;
-                    cout << "milk = " << milk << endl;
-                    cout << "total: " << milk * milk_price + water * water_price << endl << endl;
-                    cout << " ============================ " << endl << endl;
+                    cout << "============BASKET==========" << endl << endl;
+                    cout << milk.name << " = " << milk.count << endl;
+                    cout << "total: " << milk.count * milk.price + water.count * water.price << endl << endl;
+                    cout << "=============================" << endl << endl;
                 }
 
-                else if (milk == 0)
+                else if (milk.count == 0)
                 {
-                    cout << "============BASKET========== " << endl << endl;
-                    cout << "water = " << water << endl;
-                    cout << "total: " << milk * milk_price + water * water_price << endl;
+                    cout << "============BASKET==========" << endl << endl;
+                    cout << water.name << " = " << water.count << endl;
+                    cout << "total: " << milk.count * milk.price + water.count * water.price << endl << endl;
+                    cout << "============================" << endl << endl;
                 }
 
                 else
                 {
-                    cout << "============BASKET========== " << endl << endl;
-                    cout << "milk = " << milk << endl;
-                    cout << "water = " << water << endl;
-                    cout << "total: " << milk * milk_price + water * water_price << endl;
+                    cout << "============BASKET==========" << endl << endl;
+                    cout << milk.name << " = " << milk.count << endl;
+                    cout << water.name << " = " << water.count << endl;
+                    cout << "total: " << milk.count * milk.price + water.count * water.price << endl << endl;
+                    cout << "=============================" << endl << endl;
                 }
 
                 delete number;

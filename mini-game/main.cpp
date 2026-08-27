@@ -1,8 +1,9 @@
-#include "supermarket.h"
 #include "products.h"
+#include "supermarket.h"
+
 
 int main() 
 {
-    menu();
-
+    start();
+    
 }
