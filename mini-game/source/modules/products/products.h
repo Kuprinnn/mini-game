@@ -1,19 +1,20 @@
-#ifndef PRODUCTS_H
-#define PRODUCTS_H
+//#ifndef PRODUCTS_H
+//#define PRODUCTS_H
 
 #include <iostream>
 #include <string>
-
+#include <vector>
 using namespace std;
 
-class Products
+class Product
 {
 public:
+    int id;
     string name;
-    int price;
-    
+    double price;
     int count;
-
-    Products(string n, int p, int c);
 };
-#endif
+
+extern vector <Product> products;
+
+//#endif

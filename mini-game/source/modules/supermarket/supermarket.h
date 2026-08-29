@@ -1,9 +1,8 @@
-#include "modules/products/products.h"
+#include "products.h"
 
 #include <iostream>
 #include <string>
-
 using namespace std;
 
-void start();
+void menu();
 void buy();

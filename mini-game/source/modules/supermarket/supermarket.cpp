@@ -1,114 +1,60 @@
 #include "supermarket.h"
 
-using namespace std;
-
-// ==========================
-// ==========Товары==========
-Products milk("milk", 100, 0);
-Products water("water", 80, 0);
-//===========================
-
-void start()
+void menu()
 {
-    cout << "===========SHOP===========" << endl << endl;
+    cout << "===========SHOP===========" << endl;
     cout << "1. buy" << endl;
     cout << "2. inventory" << endl;
-    cout << "3. history " << endl << endl;
-    cout << "==========================" << endl << endl;
+    cout << "3. history " << endl;
+    cout << "==========================" << endl;
+    cout << "enter the option: ";
 
     int* number = new int;
 
-    cin >> *number;
-    cout << endl;
+    cin >> *number, system("cls");
 
     switch (*number)
     {
     case 1:
+    {
         buy();
         delete number;
-        break;
+    }break;
     }
 }
 
 void buy()
 {
-    cout << endl;
+    cout << "============BASKET==========" << endl;
 
-    int *number = new int;
-    
-    while (true)
+    for (Product myProduct : products)
     {
-        cout << "===========BUY============" << endl << endl;
-        cout << "1. " << milk.name << " = " << milk.price << "p. " << endl;
-        cout << "2. " << water.name << " = " << water.price  << "p." << endl;
-        cout << "3.  continue ->" << endl;
-        cout << "0.  <- back " << endl << endl;
-        cout << "==========================" << endl << endl;
+        cout << myProduct.id << ".";
+        cout << myProduct.name << " - ";
+        cout << myProduct.price << " p. " << endl;
+    }
 
-        cin >> *number;
-        cout << endl;
+    cout << "=============================" << endl;
 
-        switch (*number)
+
+    int id;
+    cout << "enter the product ID: ";
+    cin >> id, system("cls");
+
+    for (Product myProduct : products)
+    {
+        if (myProduct.id == id)
         {
-            case 0:
-            {
-                start();
-                break;
-                return;
-            }
+            cout << myProduct.id << ".";
+            cout << myProduct.name << " - ";
+            cout << myProduct.price << " p. " << endl;
 
-            case 1:
-            {
-                cout << " +1 milk " << endl << endl;
-                milk.count += 1;
-                break;
-            }
-              
-            case 2:
-            {
-                cout << " +1 water " << endl << endl;
-                water.count += 1;
-                break;
-            }
-
-            case 3:
-            {
-                if (water.count == 0)
-                {
-                    cout << "============BASKET==========" << endl << endl;
-                    cout << milk.name << " = " << milk.count << endl;
-                    cout << "total: " << milk.count * milk.price + water.count * water.price << "p." << endl << endl;
-                    cout << "=============================" << endl << endl;
-
-
-                }
-
-                else if (milk.count == 0)
-                {
-                    cout << "============BASKET==========" << endl << endl;
-                    cout << water.name << " = " << water.count << endl;
-                    cout << "total: " << milk.count * milk.price + water.count * water.price << "p." << endl << endl;
-                    cout << "============================" << endl << endl;
-                }
-
-                else
-                {
-                    cout << "============BASKET==========" << endl << endl;
-                    cout << milk.name << " = " << milk.count << endl;
-                    cout << water.name << " = " << water.count << endl;
-                    cout << "total: " << milk.count * milk.price + water.count * water.price << "p." << endl << endl;
-                    cout << "=============================" << endl << endl;
-                }
-
-                delete number;
-                return;
-            }
-
-            default:
-            {
-                cout << "ERROR! NUMBER FROM 0-4" << endl << endl;
-                break;
-            }
+            cout << "enter the quantity of the product: ";
+            cin >> myProduct.count, system("cls");
+            menu();
+            return;
         }
     }
+
+    cout << "ERROR, there is no such ID." << endl;
 }

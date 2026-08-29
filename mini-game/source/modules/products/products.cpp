@@ -1,8 +1,9 @@
 #include "products.h"
 
-Products::Products(string n, int p, int c)
+vector <Product> products =
 {
-	name  = n;
-	price = p;
-	count = c;
+	{1, "Milk", 80.00f},
+	{2,	"Water", 120.00f},
+	{3, "Meat", 300.00f},
 };
+	
