@@ -111,7 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)source;$(ProjectDir)source\modules\supermarket;$(ProjectDir)source\modules\products</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)source;$(ProjectDir)source\modules\supermarket;$(ProjectDir)source\modules\products;$(ProjectDir)source\modules\inventory</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,10 +141,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\modules\inventory\inventory.cpp" />
     <ClCompile Include="source\modules\products\products.cpp" />
     <ClCompile Include="source\modules\supermarket\supermarket.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\modules\inventory\inventory.h" />
     <ClInclude Include="source\modules\products\products.h" />
     <ClInclude Include="source\modules\supermarket\supermarket.h" />
   </ItemGroup>

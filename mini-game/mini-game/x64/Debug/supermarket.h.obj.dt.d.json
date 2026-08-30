@@ -131,7 +131,8 @@
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\ostream",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\string",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\vector",
-            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\__msvc_bit_utils.hpp"
+            "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\__msvc_bit_utils.hpp",
+            "c:\\github\\mini-game\\source\\modules\\inventory\\inventory.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

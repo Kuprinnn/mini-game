@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "mini-game\\x64\\Debug\\inventory.obj",
+            "outputs": [
+                "mini-game\\x64\\Debug\\inventory.cpp.obj.dt.module.json",
+                "mini-game\\x64\\Debug\\inventory.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
