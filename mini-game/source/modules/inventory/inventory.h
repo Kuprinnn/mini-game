@@ -11,9 +11,6 @@ public:
     string name;
     double price;
     double count;
-
-    // Подсчитывает общую сумму
-    void total();
 };
 
 extern vector <Inventory> list;

@@ -11,5 +11,3 @@ void menu();
 void buy();
 // Инвентарь
 void get_inventory();
-
-//class Inventory inventory;

@@ -1,13 +1,16 @@
 #include "supermarket.h"
 
+int balance = 5000;
 
 void menu()
 {
-    cout << "===========SHOP===========" << endl;
-    cout << "1. buy" << endl;
-    cout << "2. inventory" << endl;
-    cout << "3. history " << endl;
-    cout << "0. exit" << endl;
+    cout << "===========SHOP===========" << endl << endl;
+    cout << "Balance: " << balance <<endl << endl;
+    cout << "--------------------------" << endl;
+    cout << "1. Buy" << endl;
+    cout << "2. Inventory" << endl;
+    cout << "3. History" << endl;
+    cout << "0. Exit" << endl;
     cout << "==========================" << endl;
     cout << "enter the option: ";
 
@@ -66,6 +69,11 @@ void buy()
     cout << "enter the product ID: ";
     cin >> id, system("cls");
 
+    if (id == 0)
+    {
+        menu();
+    }
+
     for (Product myProduct : products)
     {
         // Подставляет значения из ветора Products
@@ -93,6 +101,14 @@ void buy()
             {
                 case 1:
                 {
+                    if (balance < myProduct.price * myProduct.count)
+                    {
+                        cout << "Transfer amount exceeds available balance " << endl;
+                        buy();
+                        return;
+                    }
+
+                    balance -= myProduct.price * myProduct.count;
                     cout << "the payment was successful :>" << endl << endl;
 
                     for (Inventory& item : list)
@@ -124,28 +140,36 @@ void buy()
                 case 0:
                 {
                     buy();
-                    //return;
                 }break;
             }
         }
-
-        //else
-        //{
-        //    menu();
-        //    //return;
-        //}
     }
 
     cout << "ERROR, there is no such ID." << endl;
+    buy();
+    return;
 }
 
+// Сортировка по убыванию + вывод на экран вещей которые приобрел
 void get_inventory()
 {
+    for (int i = 0; i < list.size() - 1; i++)
+    {
+        for (int j = 0; j < list.size() - i - 1; j++)
+        {
+            if (list.at(j).count < list.at(j + 1).count)
+            {
+                Inventory temp = list.at(j + 1);
+                list.at(j + 1) = list.at(j);
+                list.at(j) = temp;
+            }
+        }
+    }
+
     cout << "============INVENTORY==========" << endl;
 
     for (Inventory& my : list)
     {
-        cout << my.id << ".";
         cout << my.name << " - ";
         cout << my.count << endl;
     }
