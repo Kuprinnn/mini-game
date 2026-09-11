@@ -11,6 +11,7 @@ public:
     string name;
     double price;
     double count;
+    //double total(double price, double count);
 };
 
 extern vector <Product> products;

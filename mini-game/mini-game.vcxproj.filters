@@ -27,6 +27,9 @@
     <ClCompile Include="source\modules\inventory\inventory.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="source\modules\history\history.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\modules\supermarket\supermarket.h">
@@ -36,6 +39,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="source\modules\inventory\inventory.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="source\modules\history\history.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

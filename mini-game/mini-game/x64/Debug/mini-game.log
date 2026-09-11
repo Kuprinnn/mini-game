@@ -1,6 +1,3 @@
-﻿  main.cpp
-  products.cpp
-  supermarket.cpp
-C:\github\mini-game\source\modules\supermarket\supermarket.cpp(111,48): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
-  Создание кода...
+﻿  supermarket.cpp
+C:\github\mini-game\source\modules\supermarket\supermarket.cpp(115,48): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
   mini-game.vcxproj -> C:\github\mini-game\x64\Debug\mini-game.exe

@@ -1,11 +1,9 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\github\\mini-game\\source\\main.cpp",
+        "Source": "c:\\github\\mini-game\\source\\modules\\history\\history.h",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\github\\mini-game\\source\\modules\\supermarket\\supermarket.h",
-            "c:\\github\\mini-game\\source\\modules\\products\\products.h",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\iostream",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\yvals_core.h",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",
@@ -133,8 +131,6 @@
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\string",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\vector",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\__msvc_bit_utils.hpp",
-            "c:\\github\\mini-game\\source\\modules\\inventory\\inventory.h",
-            "c:\\github\\mini-game\\source\\modules\\history\\history.h",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\stack",
             "c:\\program files\\microsoft visual studio\\18\\insiders\\vc\\tools\\msvc\\14.51.36231\\include\\deque"
         ],

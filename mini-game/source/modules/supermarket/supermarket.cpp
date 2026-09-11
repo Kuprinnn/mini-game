@@ -1,6 +1,10 @@
 #include "supermarket.h"
 
 int balance = 5000;
+//stack <Inventory> history;
+vector <Product> hh;
+vector <Product> hh2;
+stack <Product> history;
 
 void menu()
 {
@@ -39,8 +43,8 @@ void menu()
 
         case 3:
         {
-            cout << "there is no function..." << endl << endl;
-            menu();
+            get_history();
+            delete number;
         }break;
 
         default:
@@ -111,6 +115,8 @@ void buy()
                     balance -= myProduct.price * myProduct.count;
                     cout << "the payment was successful :>" << endl << endl;
 
+                    hh.push_back(myProduct);
+
                     for (Inventory& item : list)
                     {
                         if (item.id == myProduct.id)
@@ -121,7 +127,7 @@ void buy()
                         }
 
                     }
-                   
+
                     Inventory inventory;
                     if (inventory.id != myProduct.id)
                     {
@@ -132,7 +138,6 @@ void buy()
                     }
 
                     list.push_back(inventory);
-
                     menu();
                     return;
                 }
@@ -172,6 +177,7 @@ void get_inventory()
     {
         cout << my.name << " - ";
         cout << my.count << endl;
+
     }
     cout << "===============================" << endl;
 
@@ -181,3 +187,37 @@ void get_inventory()
 
     menu();
 }
+
+void get_history()
+{
+    cout << "============HISTORY==========" << endl;
+    for (auto ptr : hh)
+    {
+        history.push(ptr);
+    }
+
+    while (!history.empty())
+    {
+        cout << history.top().name << " ";
+        cout << history.top().count << " ";
+        cout << history.top().price * history.top().count;
+        cout << endl;
+        history.pop();
+
+    }
+    cout << "=============================" << endl;
+
+    int enter;
+    cout << "click enter to return: ";
+    cin >> enter, system("cls");
+
+    menu();
+
+
+
+}
+
+
+
+
+
